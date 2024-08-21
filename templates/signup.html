@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+</head>
+<body>
+    <h1>Signup</h1>
+    <form method="POST" action="{{ url_for('auth.user_signup') }}">
+        {{ form.hidden_tag() }}
+        {{ form.username.label }} {{ form.username() }}<br>
+        {{ form.password.label }} {{ form.password() }}<br>
+        {{ form.submit() }}
+    </form>
+    <h2>Store Manager Signup</h2>
+    <form method="POST" action="{{ url_for('auth.store_manager_signup') }}">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }} {{ form.username }}
+    {{ form.password.label }} {{ form.password }}
+    {{ form.submit }}
+    </form>
+
+    <a href="{{ url_for('base') }}" class="btn btn-primary">Back to Home</a>
+</body>
+</html>
+
+

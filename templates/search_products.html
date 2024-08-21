@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Products</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <ul>
+        {% for product in products %}
+        <li>
+            {{ product.name }} - {{ product.description }} - {{ product.price }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

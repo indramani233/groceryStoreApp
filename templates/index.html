@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <!-- Include Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Include your Vue.js application -->
+    <script type="text/javascript" src="dashboard.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+    </div>
+
+    <h1>Welcome to the Authentication System of Grocery Store</h1>
+    <p>Choose an option:</p>
+    <ul>
+        <li><a href="{{ url_for('auth.user_login') }}">User Login</a></li>
+        <li><a href="{{ url_for('auth.store_manager_login') }}">Store Manager Login</a></li>
+        <li><a href="{{ url_for('auth.admin_login') }}">Admin Login</a></li>
+        <li><a href="{{ url_for('auth.user_signup') }}">User Signup</a></li>
+        <li><a href="{{ url_for('auth.store_manager_signup') }}">Store Manager Signup</a></li>
+    </ul>
+</body>
+
+</html>
